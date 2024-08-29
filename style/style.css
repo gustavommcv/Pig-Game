@@ -48,8 +48,10 @@ div.dice {
     margin-top: 50px;
     width: 100px;
     height: 100px;
-    background-color: white;
     border-radius: 5px;
+
+    background-position: center center;
+    background-size: cover;
 }
 
 /* Top div settings */
@@ -82,7 +84,9 @@ div.bottom {
 /* Responsiveness for shorter heights */
 @media screen and (max-height: 660px) {
     div.buttons {
-        height: 455px;
+        height: 70%;
+        max-height: 480px;
+        min-height: 420px;
     }
 
     body {
@@ -96,12 +100,6 @@ div.bottom {
 @media screen and (max-height: 680px) and (max-width: 630px) {
     div.game {
         min-height: 600px;
-    }
-
-    div.buttons {
-        height: 70%;
-        max-height: 480px;
-        min-height: 420px;
     }
 
     div.dice {
