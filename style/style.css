@@ -1,147 +1,198 @@
+/* Reset default styling */
 * {
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
-
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
+/* Body settings */
 body {
     width: 100vw;
     height: 100vh;
 }
 
+/* Main section settings */
 main {
     width: 100vw;
     height: 100vh;
-
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background: linear-gradient(to bottom right, #B32830, #6D3072);
 }
 
+/* Game div settings */
 div.game {
     width: 100vw;
     height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
+    min-height: 600px;
 }
 
+/* Buttons div settings */
 div.buttons {
     display: flex;
     flex-flow: column;
-
+    align-items: center;
     position: fixed;
-    
     height: 70%;
     max-height: 480px;
     min-height: 300px;
 }
 
+/* Dice div settings */
+div.dice {
+    margin-top: 50px;
+    width: 100px;
+    height: 100px;
+    background-color: white;
+    border-radius: 5px;
+}
+
+/* Top div settings */
 div.top {
     margin-top: 30px;
 }
 
+/* Bottom div settings */
 div.bottom {
     margin-top: auto;
     margin-bottom: 50px;
-
     display: flex;
     flex-flow: column;
-
     align-items: center;
 }
 
+/* Responsiveness for smaller screens */
 @media screen and (max-width: 630px) {
     div.bottom {
-        margin-bottom: 180px;
+        margin-bottom: 176px;
+    }
+
+    div.dice {
+        margin-top: 55px;
+        width: 80px;
+        height: 80px;
     }
 }
 
+/* Responsiveness for shorter heights */
+@media screen and (max-height: 660px) {
+    div.buttons {
+        height: 455px;
+    }
+
+    body {
+        overflow: hidden;
+        width: 100vw;
+        height: 100vh;
+    }
+}
+
+/* Responsiveness for very small screens */
+@media screen and (max-height: 700px) and (max-width: 630px) {
+    div.game {
+        min-height: 600px;
+    }
+
+    div.buttons {
+        height: 70%;
+        max-height: 480px;
+        min-height: 420px;
+    }
+
+    div.dice {
+        margin-top: 20px; /* Further reduce the top margin */
+        width: 50px;
+        height: 50px;
+    }
+}
+
+/* Button styling */
 .button {
     width: 140px;
     height: 35px;
-
     border-radius: 15px;
     border: none;
 }
 
+/* Specific styling for hold button */
 .button.hold {
     width: 100px;
     margin-top: 20px;
 }
 
+/* Section settings */
 section {
     width: 60%;
     height: 70%;
     max-height: 480px;
     min-height: 300px;
     max-width: 450px;
-
     display: flex;
     flex-flow: column nowrap;
-
     align-items: center;
-
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.288);
-
     background-color: rgba(255, 255, 255, 0.233);
 }
 
+/* Active section styling */
 .active {
     background-color: rgba(255, 255, 255, 0.534);
 }
 
+/* Section header styling */
 section h1 {
     font-size: 32px;
     font-weight: normal;
     color: rgb(24, 23, 23);
-
     margin-top: 70px;
 }
 
+/* Specific styling for player 1 section */
 section.player1 {
-    border-radius: 10px 0px 0px 10px;
-
+    border-radius: 10px 0 0 10px;
     margin-left: 20px;
 }
 
+/* Specific styling for player 2 section */
 section.player2 {
-    border-radius: 0px 10px 10px 0px;
+    border-radius: 0 10px 10px 0;
     margin-right: 20px;
 }
 
+/* Number styling */
 span.number {
     margin-top: 7px;
-
     color: #C02F56;
     font-size: 62px;
 }
 
+/* Current section settings */
 .section-current {
     color: #FFFFFF;
-
     display: flex;
-
     border-radius: 10px;
-
     width: 150px;
     height: 100px;
     background-color: #c02f56b4;
-
     align-items: center;
     justify-content: center;
-
     margin-top: auto;
     margin-bottom: 50px;
-
     flex-flow: column nowrap;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.288);
 }
 
+/* Active current section styling */
 .section-current.active {
     background-color: #C02F56;
 }
 
+/* Current number styling */
 .current-number {
     font-size: 32px;
     margin-top: 5px;
