@@ -1,6 +1,6 @@
 // Buttons
 const newGameButton = document.querySelector('.ng');
-const rowDiceButton = document.querySelector('.row');
+const rowDiceButton = document.querySelector('.roll');
 const holdButton = document.querySelector('.hold');
 
 // Elements
