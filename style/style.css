@@ -126,7 +126,7 @@ span.number {
 
     width: 150px;
     height: 100px;
-    background-color: #C02F56;
+    background-color: #c02f56b4;
 
     align-items: center;
     justify-content: center;
@@ -136,6 +136,10 @@ span.number {
 
     flex-flow: column nowrap;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.288);
+}
+
+.section-current.active {
+    background-color: #C02F56;
 }
 
 .current-number {
