@@ -93,7 +93,7 @@ div.bottom {
 }
 
 /* Responsiveness for very small screens */
-@media screen and (max-height: 700px) and (max-width: 630px) {
+@media screen and (max-height: 680px) and (max-width: 630px) {
     div.game {
         min-height: 600px;
     }
