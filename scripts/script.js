@@ -54,7 +54,7 @@ holdButton.addEventListener('click', () => {
 rowDiceButton.addEventListener('click', () => {
     diceNumber = randomIntFromInterval(1, 6);
 
-    dice.style.backgroundImage = `url('../imgs/${diceNumber}.png')`;
+    dice.style.backgroundImage = `url('./imgs/${diceNumber}.png')`;
 
     if (dice.style.display == 'none') { dice.style.display = 'block' }
 
