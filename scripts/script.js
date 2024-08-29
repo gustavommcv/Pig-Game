@@ -10,8 +10,32 @@ const currentSection1 = document.querySelector('.section-current.player-1');
 const player2Section = document.querySelector('.player2');
 const currentSection2 = document.querySelector('.section-current.player-2');
 
+const dice = document.querySelector('.dice');
+
+// Players Score
+let currentScorePlayer1 = 0;
+let currentScorePlayer2 = 0;
+
+let totalScorePlayer1 = 0;
+let totalScorePlayer2 = 0;
+
+// Dice Number
+let diceNumber;
+
+// Hold Button
 holdButton.addEventListener('click', () => {
     changeCurrentPlayer();
+});
+
+// Row Dice Button
+rowDiceButton.addEventListener('click', () => {
+    diceNumber = randomIntFromInterval(1, 6);
+
+    dice.style.backgroundImage = `url('../imgs/${diceNumber}.png')`;
+
+    if (diceNumber == 1) {
+        changeCurrentPlayer();
+    }
 });
 
 function changeCurrentPlayer() {
@@ -20,6 +44,8 @@ function changeCurrentPlayer() {
 
     player2Section.classList.toggle('active');
     currentSection2.classList.toggle('active');
+}
 
-    console.log('teste')
+function randomIntFromInterval(min, max) {
+    return Math.floor(Math.random() * (max - min + 1) + min);
 }
