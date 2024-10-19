@@ -76,6 +76,8 @@ div.dice {
 
     background-position: center center;
     background-size: cover;
+
+    transition: background-image .1s ease;
 }
 
 /* Top div settings */
@@ -139,6 +141,18 @@ div.bottom {
     height: 35px;
     border-radius: 15px;
     border: none;
+
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: rgb(223, 223, 223);
+    transform: translateY(-.04rem);
+    transition: background-color .3s ease, transform .2s ease;
+}
+
+.button:active {
+    transform: translateY(.02rem);
 }
 
 /* Specific styling for hold button */
@@ -159,6 +173,8 @@ section {
     align-items: center;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.288);
     background-color: rgba(255, 255, 255, 0.233);
+
+    transition: background-color .5s ease;
 }
 
 /* Active section styling */
